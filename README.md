@@ -3,8 +3,8 @@
 ## 项目概述
 
 **项目名称**：USB-COM-BOOT
-**硬件平台**：MINI-GD32F103RCT6
-**功能描述**：基于GD32F103RCT6的USB虚拟串口Bootloader，支持Ymodem协议固件升级
+**硬件平台**：MINI-GD32F103C8T6
+**功能描述**：基于GD32F103C8T6的USB虚拟串口Bootloader，支持Ymodem协议固件升级
 
 ---
 
@@ -14,13 +14,13 @@
 2. **Ymodem协议**：支持标准的Ymodem协议文件传输，稳定可靠
 3. **自动跳转**：固件下载完成后自动跳转到应用程序运行
 4. **地址配置**：应用程序起始地址为 `0x08004000`（16KB Bootloader空间）
-5. **Flash操作**：内置Flash擦除和写入功能，支持最大64KB固件
+5. **Flash操作**：内置Flash擦除和写入功能，支持最大48KB固件
 
 ---
 
 ## 硬件要求
 
-- **主控芯片**：GD32F103RCT6
+- **主控芯片**：GD32F103C8T6
 - **晶振**：8MHz外部晶振，系统时钟72MHz
 - **USB接口**：PA11（USB_DM）、PA12（USB_DP）
 - **进入Boot模式**：短接 PA0 → GND
@@ -67,7 +67,7 @@ USB-COM-BOOT/
 │   └── gd32f10x_it.c           # 中断处理
 ├── project/                  # Keil MDK工程文件
 │   └── template.uvprojx      # 工程主文件
-└── 工具/                     # 调试工具和文档
+
 ```
 
 ---
